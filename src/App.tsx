@@ -9,7 +9,6 @@ export function App() {
     <ThemeProvider theme={defaultTheme}>
       <GlobalStyle />
       <Transactions />
-      <Summary />
     </ThemeProvider>
   );
 }
