@@ -8,6 +8,7 @@ export const SearchFormContainer = styled.form`
     flex: 1;
     border-radius: 6px;
     border: 0;
+    color: ${(props) => props.theme["gray-100"]};
     background: ${(props) => props.theme["gray-900"]};
     padding: 1rem;
 
@@ -28,10 +29,14 @@ export const SearchFormContainer = styled.form`
     font-weight: bold;
     cursor: pointer;
     border-radius: 6px;
+    transition: background-color 0.2s, color 0.2s border-color 0.2s;
 
-    transition:  background-color .2s, color .2s border-color .2s;
+    &:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
 
-    &:hover {
+    &:not(:disabled):hover {
       background-color: ${(props) => props.theme["green-500"]};
       border-color: ${(props) => props.theme["green-500"]};
       color: ${(props) => props.theme.white};
